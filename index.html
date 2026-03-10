@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ICCCapital - Gestión de Cobranza</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+header{
+    background:#0b3d6b;
+    color:white;
+    padding:20px;
+    display:flex;
+    align-items:center;
+}x|
+
+.logo{
+    width:50px;
+    height:50px;
+    background:white;
+    border-radius:8px;
+    margin-right:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:#0b3d6b;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2{
+    margin-top:0;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    background:#0b3d6b;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#145a9e;
+}
+
+.call-controls{
+    display:flex;
+    gap:10px;
+}
+
+iframe{
+    width:100%;
+    height:250px;
+    border:none;
+    border-radius:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+IC
+</div>
+
+<div>
+<h1>ICCCapital</h1>
+<p>Panel de Gestión de Llamadas - Cobranza</p>
+</div>
+
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>Datos del Cliente</h2>
+
+<label>Nombre</label>
+<input value="Juan Carlos Ramírez López">
+
+<label>Identificación</label>
+<input value="CC 1032456789">
+
+<label>Deuda vencida</label>
+<input value="$4,850,000 COP">
+
+<label>Teléfono</label>
+<input value="+57 301 555 7281">
+
+<label>Días en mora</label>
+<input value="126 días">
+
+<label>
+<input type="checkbox"> Cartera castigada
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox"> Acuerdo logrado
+</label>
+
+</div>
+
+
+<div class="card">
+
+<h2>Datos del Acuerdo</h2>
+
+<label>Valor del acuerdo</label>
+<input placeholder="Ej: $3,000,000">
+
+<label>Cuota inicial</label>
+<input placeholder="Ej: $500,000">
+
+<label>Número de cuotas</label>
+<input placeholder="Ej: 6">
+
+<label>Fecha primer pago</label>
+<input type="date">
+
+<label>Observaciones</label>
+<textarea rows="4" placeholder="Notas de la gestión..."></textarea>
+
+<button>Guardar Gestión</button>
+
+</div>
+
+
+<div class="card">
+
+<h2>Controles de Llamada</h2>
+
+<div class="call-controls">
+
+<button>📞 Llamar</button>
+<button>⏸ Pausar</button>
+<button>❌ Finalizar</button>
+
+</div>
+
+<br>
+
+<p><b>Estado:</b> En llamada</p>
+
+<p><b>Agente:</b> Agente 017</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Historial / Información adicional</h2>
+
+<iframe srcdoc="
+<h3>Historial de contacto</h3>
+<ul>
+<li>12 Feb - Promesa de pago incumplida</li>
+<li>05 Feb - Cliente solicita refinanciación</li>
+<li>22 Ene - Primer contacto realizado</li>
+</ul>
+">
+</iframe>
+
+</div>
+
+</div>
+
+</body>
+</html>
